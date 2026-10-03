@@ -1,0 +1,64 @@
+{
+  "name": "review-on-call-handoff-context-auditor",
+  "description": "Run On-Call Handoff Context Auditor",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "service": {
+            "type": "string",
+            "description": "service"
+          },
+          "active_incidents": {
+            "type": "array",
+            "description": "active incidents"
+          },
+          "known_risks": {
+            "type": "array",
+            "description": "known risks"
+          },
+          "next_actions": {
+            "type": "array",
+            "description": "next actions"
+          },
+          "receiving_owner": {
+            "type": "string",
+            "description": "receiving owner"
+          }
+        },
+        "required": [
+          "service",
+          "active_incidents",
+          "known_risks",
+          "next_actions",
+          "receiving_owner"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-on-call-handoff-context-auditor.py",
+    "runtime": "python3"
+  }
+}

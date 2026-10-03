@@ -1,0 +1,13 @@
+{
+  "service": "evidence-record",
+  "active_incidents": [
+    "record-1"
+  ],
+  "known_risks": [
+    "record-1"
+  ],
+  "next_actions": [
+    "record-1"
+  ],
+  "receiving_owner": "evidence-record"
+}

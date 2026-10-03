@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: on-call-handoff-context-auditor
+version: 0.1.0
+description: Check on-call handoffs for active incidents, risks, owners, and next actions.
+skills:
+  - on-call-handoff-context-auditor-skill
+tools:
+  - review-on-call-handoff-context-auditor
+tags:
+  - operations
+  - evidence-driven

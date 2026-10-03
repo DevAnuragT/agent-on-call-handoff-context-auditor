@@ -1,0 +1,34 @@
+{
+  "slug": "on-call-handoff-context-auditor",
+  "title": "On-Call Handoff Context Auditor",
+  "category": "operations",
+  "description": "Check on-call handoffs for active incidents, risks, owners, and next actions.",
+  "fields": {
+    "service": {
+      "label": "service",
+      "kind": "required",
+      "minimum": 0
+    },
+    "active_incidents": {
+      "label": "active incidents",
+      "kind": "list",
+      "minimum": 1
+    },
+    "known_risks": {
+      "label": "known risks",
+      "kind": "list",
+      "minimum": 1
+    },
+    "next_actions": {
+      "label": "next actions",
+      "kind": "list",
+      "minimum": 1
+    },
+    "receiving_owner": {
+      "label": "receiving owner",
+      "kind": "required",
+      "minimum": 0
+    }
+  },
+  "limitations": "Uses caller-provided evidence only; cannot confirm external facts. Human review remains required."
+}
